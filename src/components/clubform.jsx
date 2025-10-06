@@ -16,7 +16,7 @@ function Clubform() {
 })
 // const[clubs,setclubs]=useState([]); insted of this we will use the context we declared in app component
 
-const{clubs, setclubs} = useContext(clubcontext);
+const{setclubs} = useContext(clubcontext);
 
 const handlechange=(e)=>{
 const{name,value}=e.target;
@@ -46,7 +46,7 @@ setclub({clubname:"",
   console.log(error);
   alert("Error: Data upload was unsucessful")
 });
-console.log(clubs);
+// console.log(clubs);
      }
 };
 

@@ -83,15 +83,15 @@ const setcolorDARKBLUE=(e)=>{
     clubs.length>0?
     <>
     <Container className="align-items-center"style={{ backgroundColor: "#f8f9fa", marginTop: '8rem' }}>
-    <Row xs={1} md={3} className="g-4">
+    <Row xs={1} md={3} className="g-4 justify-content-center">
     {clubs.map((club,index) => (
-      <motion.div
+        <Col key={club.id} className="d-flex " style={{ width:"380px"}}>
+         <motion.div
             initial={{opacity:0}}
             animate={{opacity:1}}
             transition={{delay:index*0.2,duration:0.5}}
             >
-        <Col key={club.id} className="d-flex " style={{ width:"380px"}}>
-          <Card style={{height:"600px"}}>
+          <Card style={{maxHeight:"1000px"}}>
             <Card.Img variant="top" src={Somaiyalogo} />
             <Card.Body>
               <Card.Title>{club.clubname}</Card.Title>
@@ -116,8 +116,8 @@ const setcolorDARKBLUE=(e)=>{
             </Button>
             </Card.Body>
           </Card>
+          </motion.div>
         </Col>
-        </motion.div>
     ))}
     </Row>
     </Container>

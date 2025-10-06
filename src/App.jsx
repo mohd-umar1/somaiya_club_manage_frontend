@@ -69,7 +69,7 @@ const router = createBrowserRouter([
 
 function App() {
 
-const [clubs, setclubs]=useState([{}])
+const [clubs, setclubs]=useState([])
 const [selectedclub, setselectedclub] = useState()
 
 const value ={clubs,setclubs,selectedclub,setselectedclub}

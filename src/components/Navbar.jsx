@@ -20,6 +20,7 @@ const handleview=()=>{
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/addclubs">Add Clubs</Nav.Link>
             <Nav.Link href="/view-clubs" onClick={handleview}>View Clubs</Nav.Link>
+            <Nav.Link href="/view-registerations" >View Registerations</Nav.Link>
             </Nav>
             <Nav.Link className="ms-auto" href="https://www.somaiya.org/">
             <img src={Trustlogo} alt="somaiya trust logo" height="80"/>
