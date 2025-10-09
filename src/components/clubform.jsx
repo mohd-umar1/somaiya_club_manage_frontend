@@ -64,7 +64,7 @@ const setcolorRED=(e)=>{
     <Container className="me-auto text-start">
     <Form>
       <Form.Group className="mb-3" controlId="clubname">
-        <Form.Label ><h4>Club Name</h4></Form.Label>
+        <Form.Label ><h4 >Club Name</h4></Form.Label>
         <Form.Control type="text" 
          placeholder="Enter name of club"
          name="clubname" 
@@ -79,7 +79,7 @@ const setcolorRED=(e)=>{
         value={club.department} 
         onChange={handlechange}/>
       </Form.Group> */}
-      <Form.Label ><h4>Department</h4></Form.Label>
+      <Form.Label ><h4 >Department</h4></Form.Label>
       <Form.Select className="mb-3" controlId="department" name="department" 
         value={club.department} 
         onChange={handlechange}>
@@ -90,7 +90,7 @@ const setcolorRED=(e)=>{
             <option value="IT">IT</option>
       </Form.Select>
       <Form.Group className="mb-3" controlId="description">
-        <Form.Label ><h4>Description</h4></Form.Label>
+        <Form.Label ><h4 className=" fw-bold" >Description</h4></Form.Label>
         <Form.Control type="text" 
         placeholder="Enter description of club" 
         name="description"
@@ -98,7 +98,7 @@ const setcolorRED=(e)=>{
         onChange={handlechange}/>
       </Form.Group>
       <Form.Group className="mb-3" controlId="interviewdate">
-        <Form.Label ><h4>Interview Date</h4></Form.Label>
+        <Form.Label ><h4 >Interview Date</h4></Form.Label>
         <Form.Control type="date" 
         placeholder="Enter interview date"
         name="interviewdate"  

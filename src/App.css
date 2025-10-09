@@ -40,3 +40,37 @@
 .read-the-docs {
   color: #888;
 }
+#lightrededge {
+  height: 60px;
+  width: 20%;
+  background-color: #ED1C24;
+  margin-top: 0%;
+  position: fixed;
+  top: 0;
+  left: 0%;
+  display: flex;
+}
+#darkrededge {
+  height: 60px;
+  width: 80%;
+  background-color: #B7202E;
+  margin-top: 0%;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  display: flex;
+}
+#rightdown{
+  height: 60px;
+  width: 5%;
+  background-color: #B7202E;
+  position: fixed;
+  right: 0%;
+  display: flex;
+  flex-wrap: wrap;
+  }
+body {
+  margin: 0;             
+  padding: 0;
+  width: 100%;
+}

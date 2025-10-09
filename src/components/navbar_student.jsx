@@ -6,7 +6,8 @@ import Trustlogo from '../assets/somaiyatrust.png';
 import Kjsitlogo from '../assets/kjsit_logo.png'
 import Whitesomaiya from '../assets/Whitesomaiya.png'
 
-function ColorSchemesExample({setdisplayclub}) {
+function Nabvar_user({setdisplayclub}) {
+
 const handleview=()=>{
   setdisplayclub(prev=>!prev)
 }
@@ -17,10 +18,8 @@ const handleview=()=>{
         <Container>
           <Navbar.Brand href="https://kjsit.somaiya.edu.in/en"><img src={Whitesomaiya} alt="somaiya logo" height="80"/></Navbar.Brand>
           <Nav className="me-auto fw-semibold">
-            <Nav.Link href="/admin">Home</Nav.Link>
-            <Nav.Link href="/addclubs">Add Clubs</Nav.Link>
-            <Nav.Link href="/view-clubs" onClick={handleview}>View Clubs</Nav.Link>
-            <Nav.Link href="/view-registerations" >View Registerations</Nav.Link>
+            <Nav.Link href="/student-home">Home</Nav.Link>
+            <Nav.Link href="/student_viewclub" onClick={handleview}>View Clubs</Nav.Link>
             </Nav>
             <Nav.Link className="ms-auto" href="https://www.somaiya.org/">
             <img src={Trustlogo} alt="somaiya trust logo" height="80"/>
@@ -31,4 +30,4 @@ const handleview=()=>{
   );
 }
 
-export default ColorSchemesExample;
+export default Nabvar_user;

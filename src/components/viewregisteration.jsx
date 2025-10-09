@@ -18,7 +18,7 @@ function ViewRegisteration() {
   return (
     <>
     <Form style={{marginTop:"100px"}}>
-      <Form.Label ><h4>Select club</h4></Form.Label>
+      <Form.Label ><h4 className='fw-bold'>Select club</h4></Form.Label>
       <Form.Select onClick={handleclick}>
         <option value="">--Select--</option>
         {clubs.map((club)=>(
@@ -27,6 +27,30 @@ function ViewRegisteration() {
         }
       </Form.Select>
     </Form>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Department</th>
+      <th scope="col">Year</th>
+      <th scope="col">Email-Id</th>
+      <th scope="col">Phone-Number</th>
+      <th scope="col">Applied Club</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Umar Inamdar</td>
+      <td>AIDS</td>
+      <td>SY</td>
+      <td>mohdumar.i@somaiya.edu</td>
+      <td>8097140907</td>
+      <td>S4DS</td>
+      </tr>
+  </tbody>
+  </table>
     </>
   )
 }

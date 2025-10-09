@@ -5,7 +5,7 @@ import heroImage2 from "../assets/kjsit.jpg"
 import { motion }  from "framer-motion";
 
 
-const HeroSection = () => {
+const Hero_student = () => {
 
   const setcolorRED=(e)=>{
     e.target.style.backgroundColor="#922623"
@@ -27,7 +27,7 @@ const HeroSection = () => {
             <p className="lead">
               Manage all your student clubs, registrations, and events in one place.
             </p>
-            <Button variant="primary" href="/addclubs" onMouseEnter={setcolorRED}
+            <Button variant="primary" href="/student_viewclub" onMouseEnter={setcolorRED}
             onMouseLeave={setcolorBLUE} style={{backgroundColor:"#162443"}}>
               Get Started
             </Button>
@@ -47,4 +47,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default Hero_student;

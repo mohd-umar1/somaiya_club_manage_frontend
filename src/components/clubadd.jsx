@@ -13,7 +13,7 @@ const Clubadd = () => {
     transition={{duration:0.5}}>
 
     <section style={{backgroundColor: "#f8f9fa", marginTop: '8rem'}}>
-      <Container className="club-add">
+      <Container className="club-add ">
         <Row>
           <Col md={6}>
           <div style={{ padding:"10px"}}>

@@ -16,10 +16,16 @@ import Editclub from './components/clubedit';
 import Clubedit from './components/clubedit';
 import { clubcontext } from './clubcontext';
 import { useState } from 'react';
+import Login from './components/login';
+import Register from './components/registerstudent';
+import { BrowserRouter } from 'react-router-dom'
+import Nabvar_user from './components/navbar_student';
+import Hero_student from './components/student_hero'
+import Student_Viewclubs from './components/student_view_club';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/admin",
     element:<div>
       <Header/>
       <Home/>
@@ -61,6 +67,30 @@ const router = createBrowserRouter([
     element:<div>
     <Clubedit/>
     <Footer/>
+    </div>
+  },{
+    path:"/",
+    element:<div>
+    <Login/>
+    </div>
+  },{
+    path:"/register",
+    element:<div>
+      <Register/>
+    </div>
+  },{
+    path:"/student-home",
+    element:<div>
+      <Nabvar_user/>
+      <Hero_student/>
+      <Footer/>
+    </div>
+  },{
+    path:"/student_viewclub",
+    element:<div>
+      <Nabvar_user/>
+      <Student_Viewclubs/>
+      <Footer/>
     </div>
   }
 ]);
