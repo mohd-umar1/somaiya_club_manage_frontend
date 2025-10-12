@@ -13,6 +13,7 @@ const Registerform = () => {
     email_id:"",
     username:"",
     password:"",
+    role:"",
   })
 
   const handlechange=(e)=>{
@@ -41,13 +42,15 @@ const Registerform = () => {
       console.log(error)
     }
 
-    setstudent({name:"",
+    setstudent({
+    name:"",
     department:"",
     yearofstudy:"",
     phone_number:"",
     email_id:"",
     username:"",
-    password:""})
+    password:"",
+    role:"",})
     }
   }
 
@@ -121,7 +124,8 @@ const Registerform = () => {
         onChange={handlechange} />
       </Form.Group>
       </div>
-      <Form.Group className="mb-3" >
+      <div className="d-flex flex-row" >
+      <Form.Group className="mb-3" style={{width:"50%"}}>
         <Form.Label className='fw-bold'>Password</Form.Label>
         <Form.Control
         name="password"
@@ -130,9 +134,20 @@ const Registerform = () => {
         placeholder="Password"
         onChange={handlechange} />
       </Form.Group>
+      <Form.Group className="mb-3 ms-3" style={{width:"50%"}}>
+      <Form.Label className='fw-bold'>Role</Form.Label>
+      <Form.Select name="role" value={student.role}
+      onChange={handlechange}>
+        <option value="">--Select--</option>
+        <option value="STUDENT">Student</option>
+        <option value="ADMIN">Admin</option>
+      </Form.Select>
+      </Form.Group>
       </div>
-      <Button variant="primary" type="submit" onMouseEnter={setcolorBLUE} onMouseLeave={setcolorRED}
-      style={{backgroundColor:"#922623",marginRight:"5%"}}> 
+      </div>
+      <Button variant="primary" type="submit"
+      onMouseEnter={setcolorRED} onMouseLeave={setcolorBLUE}
+      style={{backgroundColor:"#162443",marginRight:"5%"}}> 
         Submit
       </Button>
       <a href="/">Login page</a>

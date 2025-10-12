@@ -50,7 +50,7 @@ const Register = () => {
          <img src={kjsitlogo} style={{height:"48%",width:"80%",marginTop:"70px"}} href="https://kjsit.somaiya.edu.in/en/"/>
          <img src={somaiyatrust} style={{height:"13%",width:"21%",marginTop:"70px",marginLeft:"30px"}} href="https://www.somaiya.org/" />
          </div>
-         <h1 className='display-4 fw-light'>Student Registeration</h1>
+         <h1 className='display-4 fw-light'>Registeration</h1>
          <Registerform/>
          </Col>
       </Row>

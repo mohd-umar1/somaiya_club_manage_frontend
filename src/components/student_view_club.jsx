@@ -37,10 +37,23 @@ useEffect(() => {
   fetchdata();
 },[displayclub]);
 
-const handleapply=()=>{
-  alert("applied sucessfully")
-}
+const token = localStorage.getItem("jwttoken");
 
+
+const handleapply=async(club)=>{
+  try {
+  const response = await axios.post(`http://localhost:8086/appliaction/${club.clubname}`,{},{
+    headers:{
+      Authorization:`Bearer ${token}`
+    }
+  })
+  console.log(response.data)
+  alert("Applied sucessfully")
+} catch (error) {
+  console.error(error)
+  alert("there was some error in applying")
+}
+}
 
 const setcolorRED=(e)=>{
     e.target.style.backgroundColor="#922623"
@@ -77,8 +90,8 @@ const setcolorRED=(e)=>{
               </Card.Text>
               <Card.Subtitle>{club.interviewdate}</Card.Subtitle>
               <br/>
-              <Button variant="primary" style={{backgroundColor:"#922623"}} 
-              onMouseEnter={setcolorBLUE} onMouseLeave={setcolorRED} onClick={handleapply}>
+              <Button variant="primary" style={{backgroundColor:"#162443"}} 
+              onMouseEnter={setcolorRED} onMouseLeave={setcolorBLUE} onClick={()=>handleapply(club)}>
               Apply
             </Button>
             </Card.Body>
