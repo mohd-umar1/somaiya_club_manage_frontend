@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Await, Navigate, useNavigate } from 'react-router-dom';
+import {jwtDecode} from "jwt-decode";
 
 const Loginform = () => {
 
@@ -48,7 +49,17 @@ const handlesubmit= async (e)=>{
      if(response.data!=""){
       console.log(response.data)
       localStorage.setItem("jwttoken",response.data)
-      navigate("/admin")
+      const token = localStorage.getItem("jwttoken");
+      if(token){
+        const decodeed_token = jwtDecode(token);
+        const role = decodeed_token.Role||decodeed_token.role
+
+        if(role =="ADMIN"){
+          navigate("/admin")
+        }else if(role=="STUDENT"){
+          navigate("/student-home")
+        }
+      }
      }else{
       alert("Wrong Credentials")
      }
